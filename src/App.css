@@ -1,0 +1,228 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo .part1 {
+  color: purple;
+}
+
+.logo .part2 {
+  color: teal;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: purple;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  position: relative;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 40%;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  color: #7a1755;
+  font-weight: normal;
+}
+
+.hero-text .bold-text {
+  font-weight: bold;
+}
+
+.hero-text .welcome {
+  color: purple;
+  font-weight: bold;
+}
+
+.hero-text select {
+  width: 700px;
+  padding: 10px;
+  font-size: 16px;
+  position: relative;
+  background: white;
+  border: 2px solid purple;
+  z-index: 3;
+  display: block;
+  margin-top: 20px;
+}
+
+.hero-text button {
+  background: #7a1755;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.hero img {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  flex-grow: 1;
+  position: relative;
+  right: -3%;
+}
+
+.destinations {
+  padding: 50px;
+}
+
+.destinations h2 {
+  color: #7a1755;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: none;
+  padding: 20px;
+  text-align: left;
+}
+
+.card button {
+  background: purple;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: left;
+  display: block;
+}
+
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.contact {
+  background: #f9f9f9;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+}
+
+.contact h2 {
+  color: #510047;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form input,
+.contact form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.contact button {
+  background: purple;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .cards {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+      grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .hero-text {
+      max-width: 100%;
+  }
+
+  .hero img {
+      width: 100%;
+      right: 0;
+  }
+
+  .hero-text select {
+      position: static;
+      margin-top: 10px;
+  }
+
+  .cards {
+      grid-template-columns: 1fr;
+  }
+}
